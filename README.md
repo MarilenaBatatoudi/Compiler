@@ -1,7 +1,7 @@
 # MiniLang compiler in C++
 # Maria Eleni Batatoudi, mb5017
 
-### Overal Structure of the Project ###
+### Overall Structure of the Project ###
 Stage 1: Lexical Analyzer
 Stage 2: Parser (Parser Generator, Header for AST)
 Stage 3: semantic analyzer with symbol tables and control-flow checks
@@ -14,7 +14,7 @@ I followed the stage-based pipeline as mentioned in the PA4 Assignment requireme
     2. SemanticAnalysisStageProcessor
     3. OptimizationStageProcessor
     4. CodeGenerationStageProcessor
-The code generation is the final stage and it only runs after lexing, parsing, and semantic analysis succeed, just like mentioned in the assignment instructions. The CodeGenerationStageProcessor created a CodeGenerator, which is a Visitor over the AST, and returns a combined MIPS string. I maitnain separate enviornemnts for globals and locals using VarLocation and a scope stack, as well as FuncInfo to track function labels, lexical levels, and parameter and return types.
+The code generation is the final stage and it only runs after lexing, parsing, and semantic analysis succeed, just like mentioned in the assignment instructions. The CodeGenerationStageProcessor created a CodeGenerator, which is a Visitor over the AST, and returns a combined MIPS string. I maintain separate environments for globals and locals using VarLocation and a scope stack, as well as FuncInfo to track function labels, lexical levels, and parameter and return types.
 Each function follows the following stack format from the runtime specification manual:
 saved $fp at 0($fp), return address at 4($fp), static link at 8($fp) for nested functions, arguments at positive offsets, and locals at negative offsets from $fp.
 Calls push arguments right to left, then a static link, then I use jal. The callee binds each formal by copying from the appropriate positive offset into a local slot. Integers and booleans are in temporary $t registers and return through $v0, floats are in $f registers and return through $f0.
