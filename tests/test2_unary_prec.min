@@ -1,0 +1,8 @@
+func main(): int {
+    var x: int := 5;
+    var y: int := -x;          # -5
+    var z: int := 2 * (x - 3); # 2 * 2 = 4
+    print(y);                  # -5
+    print(z);                  # 4
+    return 0;
+}

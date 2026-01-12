@@ -1,0 +1,7 @@
+func main(): int {
+    var a: int := 5;
+    var b: int := 10;
+    var c: int := a + b * 2;
+    print(c);          # expect 25
+    return 0;
+}

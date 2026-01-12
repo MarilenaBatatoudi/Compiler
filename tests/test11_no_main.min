@@ -1,0 +1,5 @@
+func foo(): int {
+    var x: int := 42;
+    print(x);
+    return x;
+}

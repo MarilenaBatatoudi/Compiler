@@ -1,0 +1,14 @@
+func fact(n: int): int {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * fact(n - 1);
+    }
+}
+
+func main(): int {
+    var a: int := 5;
+    var f: int := fact(a);
+    print(f);     # 120
+    return 0;
+}

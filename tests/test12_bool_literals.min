@@ -1,0 +1,16 @@
+func main(): int {
+    var x: bool := true;
+    var y: bool := false;
+
+    if (x) {
+        print(1);      # 1
+    }
+
+    if (y) {
+        print(2);      # not printed
+    } else {
+        print(3);      # 3
+    }
+
+    return 0;
+}

@@ -1,0 +1,14 @@
+func main(): int {
+    var x: int := 10;
+    print(x);        # 10
+
+    if (x > 0) {
+        var x: int := 20;  # shadows outer x
+        var y: int := 7;
+        print(x);          # 20
+        print(y);          # 7
+    }
+
+    print(x);        # still 10
+    return 0;
+}
