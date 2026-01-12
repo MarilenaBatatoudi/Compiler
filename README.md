@@ -1,5 +1,6 @@
 # MiniLang compiler in C++
 # Maria Eleni Batatoudi, mb5017
+# COMS W4115, Programming Languages and Translators, Columbia University
 
 ### Overall Structure of the Project ###
 Stage 1: Lexical Analyzer
